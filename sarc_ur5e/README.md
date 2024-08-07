@@ -3,7 +3,7 @@
 ## To build a new dataset
 1. Modify the version so it does not overwrite the first version of dataset
     ```
-    VERSION = tfds.core.Version('1.0.0') #change the version if you want to build another dataset, if not it will overwrite the current one
+    VERSION = tfds.core.Version('1.0.0') 
     RELEASE_NOTES = {
       '1.0.0': 'Initial release.',
     }
