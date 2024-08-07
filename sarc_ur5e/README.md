@@ -1,25 +1,3 @@
-# sarc_ur5e dataset
-
-## To build a new dataset
-1. Modify the version so it does not overwrite the first version of dataset
-    ```
-    VERSION = tfds.core.Version('1.0.0') 
-    RELEASE_NOTES = {
-      '1.0.0': 'Initial release.',
-    }
-   ```
-2. Make sure the ```path``` is directed to your raw dataset
-3. Inside the dataset directory, run:
-   
-   ```
-   tfds build --overwrite
-   ```
-4. A new version of dataset will be saved under ```tensorflow_datasets``` folder in your local directory.
-
-## Visualize Converted Dataset
-
-1. Open ```visualize_dataset.ipynb```. Make sure the name assigned to ```dataset_name``` is correct. Run the cell.
-   
 ## Information of raw dataset
 Example of one trajectory https://drive.google.com/file/d/19W-Ewk-hg1nxgqV2UiqZmmTHHEblrUqY/view?usp=sharing
 
