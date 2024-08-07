@@ -12,7 +12,7 @@ Follow the guide [Installation](https://github.com/kpertsch/rlds_dataset_builder
     }
    ```
 2. Make sure the ```path``` is directed to your raw dataset
-3. Go to terminal. Inside the dataset directory, run:
+3. Open your terminal. Make sure that you are in ```rlds-env``` environment. Inside the dataset directory, run:
    
    ```
    tfds build --overwrite
