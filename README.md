@@ -1,18 +1,20 @@
 # RLDS Dataset Conversion
 
-Follow the guide [Installation](https://github.com/kpertsch/rlds_dataset_builder/tree/main?tab=readme-ov-file#installation) and [Run Example RLDS Dataset Creation](https://github.com/kpertsch/rlds_dataset_builder/tree/main?tab=readme-ov-file#run-example-rlds-dataset-creation).
+## Installation
+```git clone``` this repo.
+Follow the guide [Installation](https://github.com/kpertsch/rlds_dataset_builder/tree/main?tab=readme-ov-file#installation)
 
 ## To build a new dataset
 
-1. Open ```sarc_ur5e/sarc_ur5e/sarc_ur5e_dataset_builder.py``` . Modify the version so it does not overwrite the first version of dataset
+2. Open ```sarc_ur5e/sarc_ur5e/sarc_ur5e_dataset_builder.py``` . Modify the version so it does not overwrite the first version of dataset
     ```
     VERSION = tfds.core.Version('1.0.0') 
     RELEASE_NOTES = {
       '1.0.0': 'Initial release.',
     }
    ```
-2. Make sure the ```path``` is directed to your raw dataset
-3. Open your terminal. Make sure that you are in ```rlds-env``` environment. Inside the dataset directory, run:
+3. Make sure the ```path``` is directed to your raw dataset
+4. Open your terminal. Make sure that you are in ```rlds-env``` environment. Inside the dataset directory, run:
    
    ```
    tfds build --overwrite
