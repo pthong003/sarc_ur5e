@@ -7,7 +7,7 @@ The dataset is collected with a UR5e robot and consists of 232 trajectories in t
     traj121 to traj220: Pick up the yellow cube block and place it on top of the orange rectangular block.
     traj221 to traj232: Pick up the green cylinder block and place it on top of the orange rectangular block.
 
-The data format is as follows:
+The raw data format is as follows:
 
     robot_state: np.ndarray((L, 15))
         This stores the robot state at each timestep.
