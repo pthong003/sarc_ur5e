@@ -38,9 +38,9 @@ conversion worked before moving on.
 
 Now we can modify the provided example to convert your own data. Follow the steps below:
 
-1. **Rename Dataset**: Change the name of the dataset folder from `example_dataset` to the name of your dataset (e.g. robo_net_v2), 
-also change the name of `example_dataset_dataset_builder.py` by replacing `example_dataset` with your dataset's name (e.g. robo_net_v2_dataset_builder.py)
-and change the class name `ExampleDataset` in the same file to match your dataset's name, using camel case instead of underlines (e.g. RoboNetV2).
+1. **Rename Dataset**: Change the name of the dataset folder from `example_dataset` to the name of your dataset (e.g. sarc_ur5e), 
+also change the name of `example_dataset_dataset_builder.py` by replacing `example_dataset` with your dataset's name (e.g. sarc_ur5e_dataset_builder.py)
+and change the class name `ExampleDataset` in the same file to match your dataset's name, using camel case instead of underlines (e.g. Sarc_Ur5e).
 
 2. **Modify Features**: Modify the data fields you plan to store in the dataset. You can find them in the `_info()` method
 of the `ExampleDataset` class. Please add **all** data fields your raw data contains, i.e. please add additional features for 
