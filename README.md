@@ -4,7 +4,7 @@ Follow the guide [Installation](https://github.com/kpertsch/rlds_dataset_builder
 
 ## To build a new dataset
 
-1. Open ```sarc_ur5e/sarc_ur5e/sarc_ur5e_dataset_builder.py``` .Modify the version so it does not overwrite the first version of dataset
+1. Open ```sarc_ur5e/sarc_ur5e/sarc_ur5e_dataset_builder.py``` . Modify the version so it does not overwrite the first version of dataset
     ```
     VERSION = tfds.core.Version('1.0.0') 
     RELEASE_NOTES = {
