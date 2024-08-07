@@ -8,27 +8,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import wandb
 
-
 WANDB_ENTITY = None
 WANDB_PROJECT = 'vis_rlds'
 
-
-parser = argparse.ArgumentParser()
-parser.add_argument('dataset_name', help='name of the dataset to visualize')
-args = parser.parse_args()
-
 if WANDB_ENTITY is not None:
     render_wandb = True
-    wandb.init(entity=WANDB_ENTITY,
-               project=WANDB_PROJECT)
+    wandb.init(entity=WANDB_ENTITY, project=WANDB_PROJECT)
 else:
     render_wandb = False
 
-
 # create TF dataset
-dataset_name = args.dataset_name
+dataset_name = 'sarc__ur5e'
 print(f"Visualizing data from dataset: {dataset_name}")
-# module = importlib.import_module(dataset_name)
 ds = tfds.load(dataset_name, split='train')
 ds = ds.shuffle(100)
 
@@ -38,7 +29,7 @@ for i, episode in enumerate(ds.take(5)):
     for step in episode['steps']:
         images.append(step['observation']['image'].numpy())
     image_strip = np.concatenate(images[::4], axis=1)
-    caption = step['language_instruction'].numpy().decode() + ' (temp. downsampled 4x)'
+    caption = step['observation']['natural_language_instruction'].numpy().decode() + ' (temp. downsampled 4x)'
 
     if render_wandb:
         wandb.log({f'image_{i}': wandb.Image(image_strip, caption=caption)})
@@ -51,8 +42,15 @@ for i, episode in enumerate(ds.take(5)):
 actions, states = [], []
 for episode in tqdm.tqdm(ds.take(500)):
     for step in episode['steps']:
-        actions.append(step['action'].numpy())
-        states.append(step['observation']['state'].numpy())
+        action = step['action']
+        concatenated_action = np.concatenate([
+            [action['gripper_closedness_action'].numpy()],
+            action['rotation_delta'].numpy(),
+            [action['terminate_episode'].numpy()],
+            action['world_vector'].numpy()
+        ])
+        actions.append(concatenated_action)
+        states.append(step['observation']['robot_state'].numpy())
 actions = np.array(actions)
 states = np.array(states)
 action_mean = actions.mean(0)
@@ -68,7 +66,7 @@ def vis_stats(vector, vector_mean, tag):
     for elem in range(n_elems):
         plt.subplot(1, n_elems, elem+1)
         plt.hist(vector[:, elem], bins=20)
-        plt.title(vector_mean[elem])
+        plt.title(f'Mean: {vector_mean[elem]:.2f}')
 
     if render_wandb:
         wandb.log({tag: wandb.Image(fig)})
@@ -78,5 +76,3 @@ vis_stats(states, state_mean, 'state_stats')
 
 if not render_wandb:
     plt.show()
-
-
