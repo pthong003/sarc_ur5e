@@ -93,7 +93,7 @@ You can specify the desired number of workers with the `direct_num_workers` argu
 ## Visualize Converted Dataset
 To verify that the data is converted correctly, please run the data visualization script from the base directory:
 ```
-python3 visualize_dataset.py <name_of_your_dataset>
+python3 visualize_dataset.py sarc__ur5e
 ``` 
 This will display a few random episodes from the dataset with language commands and visualize action and state histograms per dimension.
 Note, if you are running on a headless server you can modify `WANDB_ENTITY` at the top of `visualize_dataset.py` and 
