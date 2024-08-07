@@ -2,7 +2,7 @@
 
 ## Installation
 ```git clone``` this repo.
-Follow the guide [Installation](https://github.com/kpertsch/rlds_dataset_builder/tree/main?tab=readme-ov-file#installation)
+Follow the guide on [Installation](https://github.com/kpertsch/rlds_dataset_builder/tree/main?tab=readme-ov-file#installation)
 
 ## To build a new dataset
 
