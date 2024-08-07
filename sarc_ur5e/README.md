@@ -43,20 +43,3 @@ title = {Berkeley {UR5} Demonstration Dataset},
 author = {Lawrence Yunliang Chen and Simeon Adebola and Ken Goldberg},
 howpublished = {\url{https://sites.google.com/view/berkeley-ur5/home}},
 }
-
-
-## Modifications made
-Record of modifications made to original repository.
-
-### sarc_ur5e_dataset_builder.py
-- [x] Renamed dataset
-- [x] Modified Features
-- [x] Modified Dataset Splits
-- [x] Modified Data Conversion Code
-- [x] Provided Dataset Description
-- [x] Added License
-
-### visualize_dataset.ipynb
-- [x] Removed the parser argument
-- [x] Changed the name of dataset
-- [x] Modified the ```action``` and ```language_instruction``` component
