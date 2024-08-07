@@ -24,3 +24,18 @@ Follow the guide [Installation](https://github.com/kpertsch/rlds_dataset_builder
 
 1. Open ```visualize_dataset.ipynb```. Make sure the name assigned to ```dataset_name``` is correct. Run the cell.
    
+## Modifications made
+Record of modifications made to original repository.
+
+### sarc_ur5e_dataset_builder.py
+- [x] Renamed dataset
+- [x] Modified Features
+- [x] Modified Dataset Splits
+- [x] Modified Data Conversion Code
+- [x] Provided Dataset Description
+- [x] Added License
+
+### visualize_dataset.ipynb
+- [x] Removed the parser argument
+- [x] Changed the name of dataset
+- [x] Modified the ```action``` and ```language_instruction``` component
