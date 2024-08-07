@@ -99,6 +99,8 @@ This will display a few random episodes from the dataset with language commands 
 Note, if you are running on a headless server you can modify `WANDB_ENTITY` at the top of `visualize_dataset.py` and 
 add your own WandB entity -- then the script will log all visualizations to WandB. 
 
+Or you may run the code block in visualize_dataset.ipynb
+
 ## Add Transform for Target Spec
 
 For X-embodiment training we are using specific inputs / outputs for the model: input is a single RGB camera, output
