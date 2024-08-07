@@ -1,4 +1,6 @@
-# To build a new dataset
+# sarc_ur5e dataset
+
+## To build a new dataset
 1. Modify the version so it does not overwrite the first version of dataset
     ```
     VERSION = tfds.core.Version('1.0.0') #change the version if you want to build another dataset, if not it will overwrite the current one
@@ -14,11 +16,11 @@
    ```
 4. A new version of dataset will be saved under ```tensorflow_datasets``` folder in your local directory.
 
-# Visualize Dataset
+## Visualize Converted Dataset
 
 1. Open ```visualize_dataset.ipynb```. Make sure the name assigned to ```dataset_name``` is correct. Run the cell.
    
-# Information of raw dataset
+## Information of raw dataset
 Example of one trajectory https://drive.google.com/file/d/19W-Ewk-hg1nxgqV2UiqZmmTHHEblrUqY/view?usp=sharing
 
 The dataset is collected with a UR5e robot and consists of 232 trajectories in total:
@@ -65,7 +67,7 @@ howpublished = {\url{https://sites.google.com/view/berkeley-ur5/home}},
 }
 
 
-# Modifications made
+## Modifications made
 Record of modifications made to original repository.
 
 ### sarc_ur5e_dataset_builder.py
