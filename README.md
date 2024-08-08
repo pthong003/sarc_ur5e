@@ -13,8 +13,8 @@ Follow the guide on [Installation](https://github.com/kpertsch/rlds_dataset_buil
       '1.0.0': 'Initial release.',
     }
    ```
-3. Make sure the ```path``` is directed to your raw dataset
-4. Open your terminal. Make sure that you are in ```rlds-env``` environment. Inside the dataset directory, run:
+3. Modify ```path``` to your raw dataset
+4. On the terminal, ```(rlds_env)~/rlds_dataset_builder/sarc_ur5e$```, run:
    
    ```
    tfds build --overwrite
