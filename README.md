@@ -19,8 +19,7 @@ Follow the guide on [Installation](https://github.com/kpertsch/rlds_dataset_buil
    ```
    tfds build --overwrite
    ```
-   
-5. A new version of dataset will be saved under ```tensorflow_datasets``` folder in your local directory.
+5. A new version of the dataset will be saved in the ```tensorflow_datasets/sarc__ur5e``` folder in your local directory. Note that the folder name contains two underscores ```sarc__ur5e```. This is because the ```Class``` in the ```sarc_ur5e/sarc_ur5e_dataset_builder.py``` file is named ```Sarc_Ur5e```. If you prefer the dataset folder name to have a single underscore ```sarc_ur5e```, rename the ```Class``` to ```SarcUr5e```.
 
 ## Visualize Converted Dataset
 
